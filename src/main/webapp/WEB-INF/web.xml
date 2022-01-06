@@ -1,33 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee https://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
-
-	<!-- The definition of the Root Spring Container shared by all Servlets and Filters -->
-	<context-param>
-		<param-name>contextConfigLocation</param-name>
-		<param-value>/WEB-INF/spring/root-context.xml</param-value>
-	</context-param>
-	
-	<!-- Creates the Spring Container shared by all Servlets and Filters -->
-	<listener>
-		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-	</listener>
-
-	<!-- Processes application requests -->
-	<servlet>
-		<servlet-name>appServlet</servlet-name>
-		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-		<init-param>
-			<param-name>contextConfigLocation</param-name>
-			<param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
-		</init-param>
-		<load-on-startup>1</load-on-startup>
-	</servlet>
-		
-	<servlet-mapping>
-		<servlet-name>appServlet</servlet-name>
-		<url-pattern>/</url-pattern>
-	</servlet-mapping>
-
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee https://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>/WEB-INF/spring/root-context.xml</param-value>
+  </context-param>
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <servlet>
+    <servlet-name>appServlet</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>appServlet</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Dependency1Sevlet</display-name>
+    <servlet-name>Dependency1Sevlet</servlet-name>
+    <servlet-class>kr.or.iei.tv.controller.Dependency1Sevlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Dependency1Sevlet</servlet-name>
+    <url-pattern>/Dependency1Sevlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Dependency1Servlet</display-name>
+    <servlet-name>Dependency1Servlet</servlet-name>
+    <servlet-class>kr.or.iei.tv.controller.Dependency1Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Dependency1Servlet</servlet-name>
+    <url-pattern>/try/dependency1.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Dependency2Servlet</display-name>
+    <servlet-name>Dependency2Servlet</servlet-name>
+    <servlet-class>kr.or.iei.person.controller.Dependency2Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Dependency2Servlet</servlet-name>
+    <url-pattern>/try/dependency2.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Dependency3Servlet</display-name>
+    <servlet-name>Dependency3Servlet</servlet-name>
+    <servlet-class>kr.or.iei.person.controller.Dependency3Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Dependency3Servlet</servlet-name>
+    <url-pattern>/try/dependency3.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Dependency4Servlet</display-name>
+    <servlet-name>Dependency4Servlet</servlet-name>
+    <servlet-class>kr.or.iei.person.controller.Dependency4Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Dependency4Servlet</servlet-name>
+    <url-pattern>/try/dependency4.do</url-pattern>
+  </servlet-mapping>
 </web-app>

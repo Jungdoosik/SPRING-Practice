@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	
+	<bean id="ps1" class="kr.or.iei.person.model.vo.Person">
+		<property name="name">
+			<value>홍길동</value>
+		</property>
+		<property name="age">
+			<value>20</value>
+		</property>
+		<property name="addr">
+			<value>서울시</value>
+		</property>
+	</bean>
+	
+	<bean id="ps2" class="kr.or.iei.person.model.vo.Person">
+		<property name="name">
+			<value>김말똥</value>
+		</property>
+		<property name="age">
+			<value>30</value>
+		</property>
+		<property name="addr">
+			<value>부산시</value>
+		</property>
+	</bean>
+	
+	<bean id="pm" class="kr.or.iei.person.model.vo.PersonManager">
+		<property name="ps" ref="ps2"></property>
+	</bean>
+
+</beans>
