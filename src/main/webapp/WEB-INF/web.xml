@@ -70,4 +70,54 @@
     <servlet-name>Dependency4Servlet</servlet-name>
     <url-pattern>/try/dependency4.do</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Dependency5Servlet</display-name>
+    <servlet-name>Dependency5Servlet</servlet-name>
+    <servlet-class>kr.or.iei.person.controller.Dependency5Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Dependency5Servlet</servlet-name>
+    <url-pattern>/try/dependency5.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CollectionListServlet</display-name>
+    <servlet-name>CollectionListServlet</servlet-name>
+    <servlet-class>kr.or.iei.person.controller.CollectionListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CollectionListServlet</servlet-name>
+    <url-pattern>/try/dependency6.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CollectionSetServlet</display-name>
+    <servlet-name>CollectionSetServlet</servlet-name>
+    <servlet-class>kr.or.iei.person.controller.CollectionSetServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CollectionSetServlet</servlet-name>
+    <url-pattern>/try/dependency7.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CollectionMapServlet</display-name>
+    <servlet-name>CollectionMapServlet</servlet-name>
+    <servlet-class>kr.or.iei.person.controller.CollectionMapServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CollectionMapServlet</servlet-name>
+    <url-pattern>/try/dependency8.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>BusinessServlet</display-name>
+    <servlet-name>BusinessServlet</servlet-name>
+    <servlet-class>kr.or.iei.person.controller.BusinessServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BusinessServlet</servlet-name>
+    <url-pattern>/try/dependency9.do</url-pattern>
+  </servlet-mapping>
 </web-app>

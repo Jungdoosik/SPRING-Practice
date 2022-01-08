@@ -1,6 +1,7 @@
 package kr.or.iei.person.controller;
 
 import java.io.IOException;
+import java.util.HashMap;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -10,19 +11,18 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
-import kr.or.iei.person.model.vo.Person;
-import kr.or.iei.person.model.vo.PersonManager;
+import kr.or.iei.person.model.vo.PersonMapBeanFactory;
 
 /**
- * Servlet implementation class Dependency3Servlet
+ * Servlet implementation class CollectionMapServlet
  */
-public class Dependency3Servlet extends HttpServlet {
+public class CollectionMapServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Dependency3Servlet() {
+    public CollectionMapServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,16 +32,15 @@ public class Dependency3Servlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		AbstractApplicationContext context = new GenericXmlApplicationContext("/PersonBeanConstructContext.xml");
+		AbstractApplicationContext context = new GenericXmlApplicationContext("/personBeanMapContext.xml");
 		
-		PersonManager pm = context.getBean("pm",PersonManager.class);
+		PersonMapBeanFactory mapBeanFactory = context.getBean("mapBeanFactory",PersonMapBeanFactory.class);
 		
-		Person ps = pm.getPs();
+		HashMap<String,String> map = mapBeanFactory.getMap();
 		
-		System.out.println(ps.getName());
-		System.out.println(ps.getAge());
-		System.out.println(ps.getAddr());
-		
+		System.out.println(map.get("홍길동"));
+		System.out.println(map.get("김말동"));
+		System.out.println(map.get("고길동"));
 	}
 
 	/**
@@ -51,4 +50,5 @@ public class Dependency3Servlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
+
 }

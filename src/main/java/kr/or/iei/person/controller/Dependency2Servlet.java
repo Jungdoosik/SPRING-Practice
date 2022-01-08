@@ -35,11 +35,11 @@ public class Dependency2Servlet extends HttpServlet {
 		AbstractApplicationContext context = new GenericXmlApplicationContext("/PersonBeanContext.xml");
 		
 		PersonManager pm = (PersonManager)context.getBean("pm");
-		Person ps = pm.getPs();
+		//Person ps = pm.getPs();
 		
-		System.out.println(ps.getName());
-		System.out.println(ps.getAge());
-		System.out.println(ps.getAddr());
+		System.out.println(pm.getPs().getName());
+		System.out.println(pm.getPs().getAge());
+		System.out.println(pm.getPs().getAddr());
 	}
 
 	/**

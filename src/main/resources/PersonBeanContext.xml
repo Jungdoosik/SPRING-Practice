@@ -4,6 +4,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
 	
+	<!-- person bean (객체) 1개 생성 -->
 	<bean id="ps1" class="kr.or.iei.person.model.vo.Person">
 		<property name="name">
 			<value>홍길동</value>

@@ -1,6 +1,7 @@
 package kr.or.iei.person.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -11,18 +12,18 @@ import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
 import kr.or.iei.person.model.vo.Person;
-import kr.or.iei.person.model.vo.PersonManager;
+import kr.or.iei.person.model.vo.PersonListBeanFactory;
 
 /**
- * Servlet implementation class Dependency3Servlet
+ * Servlet implementation class CollectionListServlet
  */
-public class Dependency3Servlet extends HttpServlet {
+public class CollectionListServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Dependency3Servlet() {
+    public CollectionListServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,15 +33,18 @@ public class Dependency3Servlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		AbstractApplicationContext context = new GenericXmlApplicationContext("/PersonBeanConstructContext.xml");
+		AbstractApplicationContext context = new GenericXmlApplicationContext("/personBeanListContext.xml");
 		
-		PersonManager pm = context.getBean("pm",PersonManager.class);
+		PersonListBeanFactory listBeanFactory = context.getBean("listBeanFactory",PersonListBeanFactory.class);
 		
-		Person ps = pm.getPs();
+		ArrayList<Person> list = listBeanFactory.getList();
 		
-		System.out.println(ps.getName());
-		System.out.println(ps.getAge());
-		System.out.println(ps.getAddr());
+		for(Person p : list) {
+			System.out.println(p.getName());
+			System.out.println(p.getAge());
+			System.out.println(p.getAddr());
+		}
+		
 		
 	}
 
@@ -51,4 +55,5 @@ public class Dependency3Servlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
+
 }

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+<bean id="mapBeanFactory" class="kr.or.iei.person.model.vo.PersonMapBeanFactory">
+	<property name="map">
+		<map>
+			<entry>
+				<key>
+					<value>홍길동</value>
+				</key>
+				<value>경기도</value>
+			</entry>
+			
+			<entry>
+				<key>
+					<value>김말동</value>
+				</key>
+				<value>서울시</value>
+			</entry>
+			
+			<entry>
+				<key>
+					<value>고길동</value>
+				</key>
+				<value>부산시</value>
+			</entry>
+		</map>
+	</property>
+</bean>
+</beans>

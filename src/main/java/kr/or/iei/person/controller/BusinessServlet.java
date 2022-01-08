@@ -1,7 +1,6 @@
 package kr.or.iei.person.controller;
 
 import java.io.IOException;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -10,19 +9,16 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
-import kr.or.iei.person.model.vo.Person;
-import kr.or.iei.person.model.vo.PersonManager;
-
 /**
- * Servlet implementation class Dependency3Servlet
+ * Servlet implementation class BusinessServlet
  */
-public class Dependency3Servlet extends HttpServlet {
+public class BusinessServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Dependency3Servlet() {
+    public BusinessServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,15 +28,14 @@ public class Dependency3Servlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		AbstractApplicationContext context = new GenericXmlApplicationContext("/PersonBeanConstructContext.xml");
+		AbstractApplicationContext context = new GenericXmlApplicationContext("/businessContext.xml");
 		
-		PersonManager pm = context.getBean("pm",PersonManager.class);
+		MemberService mService = context.getBean("mService",MemberService.class);
 		
-		Person ps = pm.getPs();
+		mService.selectMember();
 		
-		System.out.println(ps.getName());
-		System.out.println(ps.getAge());
-		System.out.println(ps.getAddr());
+		
+		
 		
 	}
 
@@ -51,4 +46,5 @@ public class Dependency3Servlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
+
 }

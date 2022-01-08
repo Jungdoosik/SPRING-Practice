@@ -11,6 +11,11 @@
 		<config>src/main/resources/PersonBeanContext.xml</config>
 		<config>src/main/resources/PersonBeanConstructContext.xml</config>
 		<config>src/main/resources/ApplicationContext.xml</config>
+		<config>src/main/resources/personBeanScopeContext.xml</config>
+		<config>src/main/resources/personBeanListContext.xml</config>
+		<config>src/main/resources/personBeanSetContext.xml</config>
+		<config>src/main/resources/personBeanMapContext.xml</config>
+		<config>src/main/resources/businessContext.xml</config>
 	</configs>
 	<autoconfigs>
 		<config>src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml</config>
