@@ -120,4 +120,14 @@
     <servlet-name>BusinessServlet</servlet-name>
     <url-pattern>/try/dependency9.do</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AnotationServlet</display-name>
+    <servlet-name>AnotationServlet</servlet-name>
+    <servlet-class>kr.or.kh.computer.controller.AnotationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AnotationServlet</servlet-name>
+    <url-pattern>/try/dependency10.do</url-pattern>
+  </servlet-mapping>
 </web-app>

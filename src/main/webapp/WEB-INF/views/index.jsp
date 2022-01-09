@@ -21,5 +21,7 @@
 	<a href="/try/dependency7.do">7. 컬렉션 처리 (set)</a><br>
 	<a href="/try/dependency8.do">8. 컬렉션 처리 (map)</a><br>
 	<a href="/try/dependency9.do">9. xml로 Service/DAO생성</a><br>
+	<a href="/try/dependency10.do">10. 어노테이션 사용해보기</a><br>
+	
 </body>
 </html>

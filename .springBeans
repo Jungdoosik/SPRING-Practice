@@ -16,6 +16,7 @@
 		<config>src/main/resources/personBeanSetContext.xml</config>
 		<config>src/main/resources/personBeanMapContext.xml</config>
 		<config>src/main/resources/businessContext.xml</config>
+		<config>src/main/resources/computerContext.xml</config>
 	</configs>
 	<autoconfigs>
 		<config>src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml</config>
